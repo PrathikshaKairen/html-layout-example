@@ -44,11 +44,61 @@ nav li a {
 
 main {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem;
 }
 
 article {
-    flex: 1;
+    flex: 1 1 60%;
     margin-right: 2rem;
+}
+
+article h2 {
+    margin-top: 0;
+}
+
+article img {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+aside {
+    flex: 1 1 35%;
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    article, aside {
+        flex: 1 1 100%;
+    }
+
+    article img {
+        float: none;
+        margin: 1rem 0;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
