@@ -23,12 +23,10 @@ header h1 {
 }
 
 nav {
-    position: relative;
-    top: 3.5rem;
-    left: 0;
-    width: 100%;
-    padding: 1rem;
+    position: sticky;
+    top: 0;
     background-color: #333;
+    padding: 1rem;
 }
 
 nav ul {
@@ -45,10 +43,12 @@ nav li a {
 }
 
 main {
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
+    padding: 1rem;
 }
 
 article {
-    flex: 1
+    flex: 1;
+    margin-right: 2rem;
+}
